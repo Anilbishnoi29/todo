@@ -41,12 +41,12 @@ function taskCount() {
 }
 
 // submit button
-userInput.addEventListener("keyup", (event) => {
-    if (event.keyCode === 13) {
-        event.preventDefault();
-        submitTask.click();
-    }
-})
+// userInput.addEventListener("keyup", (event) => {
+//     if (event.keyCode === 13) {
+//         event.preventDefault();
+//         submitTask.click();
+//     }
+// })
 
 submitTask.addEventListener("click", function() {
 
