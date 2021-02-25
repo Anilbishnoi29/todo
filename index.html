@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <title>todo List</title>
+</head>
+
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <header>
+            <h2> to-do list for web</h2>
+            <h4>best use of local-storage.</h4>
+
+            <div class="alertbox">
+                <div class="alert">
+
+                </div>
+            </div>
+        </header>
+        <form class="d-flex ">
+            <input id="userInput" type="text" placeholder="enter your task..." autofocus />
+            <button id="submit" type="submit">
+        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 0H4V4H0V7H4V11H7V7H11V4H7V0Z" fill="white"/>
+        </svg>
+    </button>
+        </form>
+
+        <!-- <hr> -->
+        <div id="todoMain">
+            <div class="heading">
+                <h3> Upcoming Task
+                    <p class="taskCount"></p>
+                </h3>
+                <button type="submit" id="clearTask">Clear All Task</button>
+            </div>
+            <ul class="todoList">
+
+            </ul>
+
+        </div>
+    </div>
+    <!-- <script src="js/app.js"></script> -->
+    <script src="js/main.js"></script>
+
+</body>
+
+
+</html>

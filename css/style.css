@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ulColor: #2d3035;
+    --orange: #ff5668;
+    --form: #2288ff;
+    --dark: #404040;
+    --blue: #04427f;
+    --bodyColor: #22252a;
+    --mainColor: #021341;
+}
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    background: var(--bodyColor);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.container {
+    width: 767px;
+    max-width: 90%;
+    margin: auto;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#clearTask {
+    background: var(--orange);
+    color: var(--bodyColor);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.heading {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between !important;
+    background: var(--ulColor);
+    border-bottom: 0.1em solid var(--bodyColor);
+}
+
+.taskCount {
+    margin-left: 1em;
+    font-weight: 500;
+}
+
+h3 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7em 2.5rem;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--orange);
+    margin-top: 0.5rem;
+}
+
+.flexEnd {
+    justify-content: flex-end !important;
+    display: flex;
+    align-items: center;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-direction {
+    flex-direction: column;
+}
+
+form,
+li {
+    padding: 1rem;
+    list-style: none;
+    color: #fff !important;
+    background-color: var(--ulColor);
+}
+
+form {
+    border: 2px solid var(--form);
+    padding: 0;
+    height: 40px;
+    /* overflow: hidden; */
+}
+
+form input,
+form input:hover,
+form input:focus {
+    outline: none;
+    height: 40px;
+    padding: 1rem;
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+button {
+    padding: 0.5rem 2rem;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    background: var(--form);
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+header {
+    padding: 3rem;
+    padding-bottom: 1rem;
+}
+
+#todoMain {
+    margin-top: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#todoMain div {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#todoMain li small.label {
+    margin-right: 1rem;
+}
+
+div {
+    transition: all 0.5s;
+}
+
+li.done {
+    opacity: 0.6;
+    border-left: 7px solid #00d48f;
+    background-color: #00d48d4b;
+    transition: all 0.5s;
+}
+
+li.done p {
+    text-decoration: line-through;
+}
+
+li.done:hover {
+    background-color: #10be844b;
+}
+
+li.done div:first-child {
+    margin-left: 10px;
+    transition: all 0.5s;
+}
+
+li:hover {
+    background-color: #3a3e46;
+    transition: all 0.5s;
+}
+
+#todoMain li {
+    padding: 0.5rem 1rem;
+    margin: 2px 0;
+    color: var(--dark);
+    transition: all 0.5s;
+    /* box-shadow: 0 0 2px rgb(0 0 0 / 42%); */
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.todoList {
+    background: var(--bodyColor);
+    box-shadow: 0 0 5px rgb(0 0 0 / 5%);
+    position: relative;
+    z-index: 2;
+    margin-bottom: 3rem;
+}
+
+.todoList::after {
+    content: "";
+    box-shadow: 0 1px 1px rgb(0 0 0 / 20%), 0 8px 0 -3px #2d3035, 0 9px 1px -3px rgb(0 0 0 / 20%), 0 16px 0 -6px #2d3035, 0 17px 2px -6px rgb(0 0 0 / 20%);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 20px;
+    z-index: 0;
+}
+
+.todoList a {
+    text-decoration: none;
+    height: 40px;
+    width: 40px;
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    margin: 0 0.2rem;
+    cursor: pointer;
+}
+
+svg,
+path {
+    overflow: initial;
+    pointer-events: none !important;
+}
+
+.todoList .listItem .todoItemsName {
+    width: 100%;
+    overflow-wrap: break-word;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.fill {
+    fill: #00d48f;
+}
+
+#checkMark {
+    stroke: transparent;
+    transition: all 0.5s ease-out;
+}
+
+li.done #checkMark {
+    stroke: #fff;
+    transition: all 0.5s ease-out;
+}
+
+#trashTop {
+    transition: all 0.5s;
+}
+
+a.d-flex.deleteBtn:hover #trashTop {
+    transform: rotateZ(20deg) translateX(-7px);
+    transform-origin: right bottom;
+    transition: all 0.5s;
+}
+
+svg,
+path {
+    overflow: initial;
+    pointer-events: none !important;
+    transition: all 0.5s;
+}
+
+
+/* transition: all 0.5s ease-out; */

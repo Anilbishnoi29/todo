@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+    #todoMain {
+        margin-top: 2rem;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    #todoMain div {
+        width: 100%;
+        margin: 0;
+    }
+    #todoMain div:last-child {
+        margin: 0;
+    }
+    header {
+        padding: 1rem;
+        padding-bottom: 1rem;
+    }
+}
